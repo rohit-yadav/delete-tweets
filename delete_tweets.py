@@ -27,3 +27,23 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
+
+# In[2]:
+
+
+profile_url = "https://twitter.com/realRohitYadav"
+# profile_url = "https://twitter.com/narendramodi"
+
+# Requesting the url
+response = requests.get(profile_url)
+html = response.text
+
+# Soup object
+soup = BeautifulSoup(html, 'html.parser')
+
+
+# In[3]:
+
+
+soup.title
+
